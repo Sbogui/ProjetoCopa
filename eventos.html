@@ -21,8 +21,8 @@
     </button>
 
     <nav class="offcanvas-lg offcanvas-end menu-principal"
-         tabindex="-1" id="menuPrincipal"
-         aria-labelledby="titulo-menu-principal" data-bs-theme="dark">
+        tabindex="-1" id="menuPrincipal"
+        aria-labelledby="titulo-menu-principal" data-bs-theme="dark">
       <div class="offcanvas-header">
         <h2 class="offcanvas-title" id="titulo-menu-principal">Navegação principal</h2>
         <button type="button" class="btn-close btn-close-white"
@@ -45,9 +45,9 @@
     <section id="cronograma" aria-labelledby="titulo-cronograma">
       <h2 id="titulo-cronograma">Cronograma das rodadas</h2>
       <div class="tabela-responsiva"
-           role="region"
-           aria-label="Cronograma das rodadas"
-           tabindex="0">
+          role="region"
+          aria-label="Cronograma das rodadas"
+          tabindex="0">
         <table>
           <caption>Rodadas da Copa Senac Hackathon</caption>
           <thead>
@@ -72,6 +72,13 @@
     <section id="placar" aria-labelledby="titulo-placar">
       <h2 id="titulo-placar">Placar geral</h2>
       <p>O total é a soma das rodadas. O desempate é feito pela maior pontuação em uma única rodada.</p>
+
+      <div id="area-busca" hidden>
+        <label for="busca-equipe">Buscar equipe</label>
+        <input id="busca-equipe" type="search" autocomplete="off">
+        <p id="status-busca" role="status"></p>
+      </div>
+
       <div class="tabela-responsiva" role="region" aria-label="Placar geral" tabindex="0">
         <table>
           <caption>Placar geral após a rodada 3</caption>
@@ -105,5 +112,6 @@
   </footer>
 
   <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

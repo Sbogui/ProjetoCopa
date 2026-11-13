@@ -125,3 +125,11 @@ Registro das decisões técnicas e de produto da Copa Senac Hackathon. Cada entr
 - **Limpeza:** removi regras duplicadas ou sem efeito (`padding-inline` repetido, `#noticias`, `main { width: 100% }`) e troquei as cores em hexadecimal do botão por `var(--cor-fundo)`.
 - **Simplificação do CSS:** juntei os dois `:root` em um só (os valores de `clamp()` ficaram junto dos outros tokens), troquei as propriedades lógicas (`padding-block`, `margin-inline`) por `padding-top`, `margin: 0 auto` e parecidas, e tirei comentários e regras que não faziam falta (`overscroll-behavior-inline`, `scroll-behavior`). O visual é o mesmo.
 - **HTML:** tirei o `aria-label` do botão Menu (o texto "Menu" já serve de nome) e os atributos `aria-hidden` e `aria-describedby` do modal, que o Bootstrap já controla.
+
+## D15 — JavaScript: validação do contato e busca de equipe
+
+- **Arquivo:** `js/script.js`, carregado depois do Bootstrap nas três páginas. Cada bloco só roda se a página tem o elemento dele (`if (formulario)`, `if (areaBusca)`).
+- **Validação do formulário:** no envio, o script cancela o recarregamento (`preventDefault`), confere nome, e-mail (precisa de `@` e `.`) e mensagem, marca o campo com `aria-invalid="true"` e escreve o resultado em `<p role="status">`. Em caso de erro, o foco vai para o primeiro campo errado. O envio é só uma simulação, porque não há servidor.
+- **Fallback:** o `novalidate` é colocado pelo próprio JavaScript. Se o script não carregar, o navegador valida com `required` e `type="email"` (D06).
+- **Busca de equipe:** o campo fica escondido (`hidden`) no HTML e o script o mostra, porque sem JavaScript ele não funcionaria. A cada letra digitada, as linhas do placar que não têm o texto no nome da equipe ganham `hidden`, e a região de status diz quantas equipes foram encontradas.
+- **Limites conhecidos:** a busca não ignora acentos (digitar "tche" não encontra "Tchê Debug"), e a zebra das linhas da tabela pode ficar fora de ordem quando há linhas escondidas.

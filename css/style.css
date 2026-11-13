@@ -323,7 +323,9 @@ textarea:disabled {
 }
 
 input:user-invalid,
-textarea:user-invalid {
+textarea:user-invalid,
+input[aria-invalid="true"],
+textarea[aria-invalid="true"] {
   border-width: 3px;
   border-color: var(--cor-erro);
 }

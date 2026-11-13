@@ -95,8 +95,8 @@ Lista das inconsistências do esqueleto do enunciado (Projeto de recuperação U
 - Localização: `<form id="form-contato" novalidate>`
 - Problema encontrado: O atributo `novalidate` desliga a validação do navegador e o esqueleto não tem JavaScript que a substitua.
 - Impacto: O formulário pode ser enviado vazio ou com e-mail inválido, sem nenhum aviso.
-- Correção aplicada: Tirei o `novalidate`. A validação nativa já funciona, e o JavaScript vai acrescentar as mensagens na região de status.
-- Situação: Parcial — validação nativa pronta; mensagens em JavaScript pendentes
+- Correção aplicada: O HTML não tem `novalidate`, então sem JavaScript o navegador valida os campos. Com JavaScript, o `script.js` valida nome, e-mail e mensagem e escreve o erro ou o sucesso na região de status.
+- Situação: Corrigida
 
 ## Inconsistência 13
 
