@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portal com notícias, cronograma e placar da Copa Senac Hackathon, uma competição de tecnologia fictícia.">
+  <title>Copa Senac Hackathon</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="pular" href="#conteudo">Ir para o conteúdo</a>
+
+  <header>
+    <a class="logo" href="index.html">Copa Senac Hackathon</a>
+
+    <button class="btn btn-copa d-lg-none" type="button"
+            data-bs-toggle="offcanvas" data-bs-target="#menuPrincipal"
+            aria-controls="menuPrincipal">
+      Menu
+    </button>
+
+    <nav class="offcanvas-lg offcanvas-end menu-principal"
+         tabindex="-1" id="menuPrincipal"
+         aria-labelledby="titulo-menu-principal" data-bs-theme="dark">
+      <div class="offcanvas-header">
+        <h2 class="offcanvas-title" id="titulo-menu-principal">Navegação principal</h2>
+        <button type="button" class="btn-close btn-close-white"
+                data-bs-dismiss="offcanvas" data-bs-target="#menuPrincipal"
+                aria-label="Fechar menu"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul>
+        <li><a href="index.html" aria-current="page">Início</a></li>
+        <li><a href="eventos.html">Eventos</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <h1>Acompanhe a Copa Senac Hackathon</h1>
+
+    <section id="destaque" class="destaque" aria-labelledby="titulo-destaque">
+      <h2 id="titulo-destaque">Em destaque</h2>
+      <p>Código Zero lidera o placar com 260 pontos. A próxima rodada é a 4, <em>Segurança e testes</em>, em <time datetime="2026-10-24">24/10/2026</time>.</p>
+      <ul>
+        <li><a href="eventos.html#placar">Ver o placar geral</a></li>
+        <li><a href="eventos.html#cronograma">Ver o cronograma das rodadas</a></li>
+      </ul>
+      <button type="button" class="btn btn-copa"
+              data-bs-toggle="modal" data-bs-target="#modalRegras">
+        Como funciona a Copa?
+      </button>
+    </section>
+
+    <section id="noticias" aria-labelledby="titulo-noticias">
+      <h2 id="titulo-noticias">Notícias</h2>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 noticias-grid">
+        <div class="col">
+          <article>
+            <h3>Rodada 3 termina com recorde de pontuação</h3>
+            <p><time datetime="2026-10-12">12/10/2026</time></p>
+            <p>A equipe Bit Bandits marcou 92 pontos na rodada Interface mobile-first, a maior pontuação em uma única rodada até agora.</p>
+          </article>
+        </div>
+        <div class="col">
+          <article>
+            <h3>Desafio da rodada 4 é divulgado</h3>
+            <p><time datetime="2026-10-14">14/10/2026</time></p>
+            <p>As equipes vão receber um aplicativo com falhas para encontrar e corrigir. A rodada Segurança e testes acontece em 24/10/2026.</p>
+          </article>
+        </div>
+        <div class="col">
+          <article>
+            <h3>Pitch final terá cinco minutos por equipe</h3>
+            <p><time datetime="2026-10-15">15/10/2026</time></p>
+            <p>Na rodada 5, em 07/11/2026, cada equipe apresenta o projeto em cinco minutos e responde a perguntas da banca.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Conteúdo fictício. Projeto acadêmico da UC15 — Desenvolvimento Web Mobile.</p>
+  </footer>
+
+  <div class="modal fade" id="modalRegras" tabindex="-1"
+       aria-labelledby="titulo-modal-regras">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="titulo-modal-regras">Como funciona a Copa?</h2>
+          <button type="button" class="btn-close btn-close-white"
+                  data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body">
+          <p>As equipes acumulam pontos a cada rodada. O placar geral reúne os resultados, e o cronograma informa os próximos desafios.</p>
+          <p>A próxima rodada é Segurança e testes, marcada para 24/10/2026.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-copa" data-bs-dismiss="modal">Entendi</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
